@@ -9,9 +9,10 @@ const port = process.env.PORT || 9999
 
 app.use(express.json())
 
-// app.get("/", async(req, res) => {
-//     res.send(await redisClient.get('name'))
-// })
+app.get("/", async(req, res) => {
+    // res.send(await redisClient.get('name'))
+    res.send("home")
+})
 
 app.use("/user", userRouter)
 
